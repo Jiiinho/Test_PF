@@ -1,0 +1,19 @@
+# Cloudflare에서 이 사이트를 열 때 함께 보내는 보안 설정이에요. 고치지 않아도 돼요.
+# · 다른 사이트가 이 사이트를 몰래 끼워 넣지 못하게 막고, 항상 보안 연결(https)로 열리게 해요.
+# · HTML 속성에 숨겨 넣은 코드(onerror 같은 것)는 실행되지 않고, 카메라·마이크·위치 같은 기능은 꺼 둬요.
+# · 글꼴·사진·영상은 이 사이트 안의 파일만 써요.
+# · 방문 분석은 Cloudflare 방문 통계, 구글 애널리틱스, 메타 픽셀만 허용해 뒀어요 (index.html ③ 분석에 ID를 적으면 작동).
+# · 그 밖의 바깥 글꼴·사진·스크립트(지도, 채팅 위젯 등)를 새로 넣으면 막힐 수 있어요. 그럴 땐 먼저 물어봐 주세요.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), accelerometer=(), gyroscope=(), magnetometer=(), midi=(), display-capture=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000
+  Cross-Origin-Opener-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://connect.facebook.net; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://www.facebook.com; media-src 'self'; connect-src 'self' https://cloudflareinsights.com https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://www.facebook.com; frame-src https://www.facebook.com; worker-src 'none'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+
+# 글꼴 파일은 바뀌지 않으니 다시 방문할 때 새로 받지 않게 해요 (사진은 같은 이름으로 바꿔 넣을 수 있어서 그대로 둬요)
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

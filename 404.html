@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="only light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>페이지를 찾을 수 없어요 · P&amp;F</title>
+<!-- 없는 주소로 들어왔을 때 보이는 페이지예요. 브랜드 이름(P&F 두 군데)만 바꿔도 돼요. -->
+<link rel="icon" href="/images/favicon.png" type="image/png">
+<link rel="stylesheet" href="/fonts/pretendard.css">
+<link rel="stylesheet" href="/fonts/nanumsquareround.css">
+<style>
+:root{--먹색:#171411;--아이보리:#F6F1EA;--금색:#B8955A}
+*{box-sizing:border-box}
+body{display:flex;align-items:center;justify-content:center;min-height:100vh;min-height:100svh;margin:0;padding:40px 20px;background:var(--먹색);color:var(--아이보리);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;text-align:center;-webkit-font-smoothing:antialiased}
+main{max-width:420px}
+.brand{margin:0 0 28px;color:var(--금색);font-family:"NanumSquareRound","Pretendard Variable",Pretendard,sans-serif;font-size:22px;font-weight:700;letter-spacing:.14em}
+h1{margin:0;font-family:"NanumSquareRound","Pretendard Variable",Pretendard,sans-serif;font-size:clamp(24px,7vw,32px);font-weight:700;line-height:1.38;letter-spacing:-.02em}
+.lead{margin:14px 0 0;opacity:.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;margin-top:32px;padding:0 28px;border-radius:999px;background:var(--금색);color:var(--먹색);font-weight:600;text-decoration:none;-webkit-tap-highlight-color:transparent;transition:opacity .2s ease,transform .15s ease}
+@media (hover:hover){.btn:hover{opacity:.86}}
+.btn:active{opacity:.8;transform:scale(.97)}
+.btn:focus-visible{outline:2px solid var(--아이보리);outline-offset:3px}
+</style>
+</head>
+<body>
+<main>
+  <p class="brand">P&amp;F</p>
+  <h1>찾으시는 페이지가 없어요</h1>
+  <p class="lead">주소가 바뀌었거나 없어진 페이지예요.<br>첫 화면에서 다시 찾아 주세요.</p>
+  <a class="btn" href="/">첫 화면으로 가기</a>
+</main>
+</body>
+</html>
